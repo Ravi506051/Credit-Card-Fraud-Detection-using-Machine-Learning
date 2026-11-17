@@ -90,3 +90,5 @@ function showToast(message) {
   setTimeout(() => toast.classList.add('hidden'), 2800);
 }
 document.getElementById('export-btn').addEventListener('click', () => window.print());
+const requestedView = new URLSearchParams(window.location.search).get('view');
+if (requestedView && names[requestedView]) showView(requestedView);
