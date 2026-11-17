@@ -112,7 +112,7 @@ class Handler(SimpleHTTPRequestHandler):
             return self.json_response({"batches": batches, "feedback": feedback, "lessons": lessons, "audit": audit})
         if path.startswith("/api/"):
             return self.json_response({"error": "Not found"}, HTTPStatus.NOT_FOUND)
-        if path not in {"/", "/index.html", "/styles.css", "/app.js", "/polish.css", "/polish.js", "/redesign.css", "/redesign.js", "/professional.css", "/backend.js", "/MYAIGURU_case_study_preview.mp4"}:
+        if path not in {"/", "/index.html", "/styles.css", "/app.js", "/polish.css", "/polish.js", "/redesign.css", "/redesign.js", "/professional.css", "/backend.js", "/MYAIGURU_case_study_preview.mp4", "/MYAIGURU_case_study_Ravi_voice.mp4"}:
             self.send_error(HTTPStatus.NOT_FOUND)
             return
         return super().do_GET()
